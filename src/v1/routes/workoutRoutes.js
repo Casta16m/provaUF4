@@ -1,15 +1,10 @@
 const express = require("express");
-const workoutController = require("../../controllers/workoutController");
-const recordController = require("../../controllers/recordController");
+const userController = require("../controllers/userController");
 
 const router = express.Router();
 
 router
-  .get("/", workoutController.getAllWorkouts)
-  .get("/:workoutId", workoutController.getOneWorkout)
-  .get("/:workoutId/records", recordController.getRecordForWorkout)
-  .post("/", workoutController.createNewWorkout)
-  .patch("/:workoutId", workoutController.updateOneWorkout)
-  .delete("/:workoutId", workoutController.deleteOneWorkout);
+  .get("/", userController.getAllUsers)
+  .post("/", userController.creteNewUser);
 
 module.exports = router;

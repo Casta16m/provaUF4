@@ -6,8 +6,8 @@ const getAllUsers = (filterParams) => {
     try {
         let users = DB.users;
         if (filterParams.name) {
-            return DB.users.filter((users) =>
-                users.name.toLowerCase().includes(filterParams.name)
+            return DB.users.filter((user) =>
+                user.name.toLowerCase().includes(filterParams.name)
             );
         }
         return users;
@@ -16,20 +16,25 @@ const getAllUsers = (filterParams) => {
     }
 };
 
-const getOneUser = (userId) => {
+const createNewUser = (newUser) => {
     try {
-        const user = DB.users.find((user) => user.id === userId);
+        const isAlreadyAdded =
+            DB.users.findIndex((user) => user.username === newUser.name) > -1;
 
-        if (!user) {
+        if (isAlreadyAdded) {
             throw {
                 status: 400,
-                message: `Can't find user with the id '${userId}'`,
+                message: `User with the name '${newUser.name}' already exists`,
             };
         }
 
-        return user;
-    } catch (error) {
-        throw { status: error?.status || 500, message: error?.message || error };
-    }
-}
+        DB.users.push(newUser);
+        saveToDatabase(DB);
 
+        return newUser;
+    } catch (error) {
+        throw { status: 500, message: error?.message || error };
+    }
+};
+
+module.exports = { getAllUsers, createNewUser };
