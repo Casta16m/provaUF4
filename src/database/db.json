@@ -19,18 +19,18 @@
     {
       "id": "5678",
       "user": "Tommy V",
-      "title": "",
-      "description": "",
-      "status": "",
+      "title": "lkjlkj",
+      "description": "mnbmnb",
+      "status": "DOING",
       "createdAt": "4/20/2022, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     },
     {
       "id": "8765",
       "user": "Tommy V",
-      "title": "",
-      "description": "",
-      "status": "",
+      "title": "fdsfsd",
+      "description": "sdfdsf",
+      "status": "TODO",
       "createdAt": "4/20/2022, 2:21:56 PM",
       "updatedAt": "4/20/2022, 2:21:56 PM"
     }
