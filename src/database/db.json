@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "1234",
+      "username": "Tommy V",
+      "fullname": "Tommy Vbar",
+      "createdAt": "4/20/2022, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "id": "4321",
+      "username": "Brian",
+      "fullname": "Brian dfdasf",
+      "createdAt": "4/20/2022, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "5678",
+      "user": "Tommy V",
+      "title": "",
+      "description": "",
+      "status": "",
+      "createdAt": "4/20/2022, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    },
+    {
+      "id": "8765",
+      "user": "Tommy V",
+      "title": "",
+      "description": "",
+      "status": "",
+      "createdAt": "4/20/2022, 2:21:56 PM",
+      "updatedAt": "4/20/2022, 2:21:56 PM"
+    }
+  ]
+}
